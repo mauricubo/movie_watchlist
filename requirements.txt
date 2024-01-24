@@ -1,0 +1,6 @@
+flask
+gunicorn
+python-dotenv
+flask-wtf
+pymongo
+passlib
