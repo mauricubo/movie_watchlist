@@ -11,8 +11,8 @@
         </a>
         <nav class="nav">
             {%- if not email %}
-                <a class="nav__link"
-                href="#"
+                <a class="nav__link {{ 'nav__link--active' if request.path == url_for('pages.login') }}"
+                href="{{ url_for('pages.login') }}"
                 >
                     <span class="nav__item">Log in</span>
                 </a>
@@ -26,7 +26,7 @@
                 href="{{ url_for('pages.index') }}">
                     <span class="nav__item">Movies</span>
                 </a>
-                <a class="nav__link" href="#">
+                <a class="nav__link" href="{{ url_for('pages.logout') }}">
                     <span class="nav__item">Log out</span>
                 </a>
             {% endif %}
